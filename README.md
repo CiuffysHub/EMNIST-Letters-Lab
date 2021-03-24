@@ -18,13 +18,13 @@ Installare librerie:
 
 Per produrre le immagini analoghe a (Cohen et al. 2017):
 
-    python script.py features_reduced.npz labels_original.npz decision_tree
-    python script.py features_reduced.npz labels_original.npz random_forest 150
+    python decisiontree.py features_reduced.npz labels_original.npz
+    python randomforest.py features_reduced.npz labels_original.npz 150
 
 Per produrre le confusion matrix:
 
-    python script.py features_reduced.npz labels_original.npz decision_tree 
-    python script.py features_reduced.npz labels_corrected.npz decision_tree
+    python decisiontree.py features_reduced.npz labels_original.npz
+    python decisiontree.py features_reduced.npz labels_corrected.npz
 
 Tutti gli altri risultati delle tabelle sono riproducibili tramite l'utilizzo delle features e degli script nella cartella 'heuristics_utils':
 ### Labels 'Corrette'
@@ -73,11 +73,8 @@ Applica **Arrotondamento** delle features:
 
 Avvia **Apprendimento**:
 
-    python script.py features.npz labels.npz random_forest #number_of_trees
-    
-    oppure
-    
-    python script.py features.npz labels.npz decision_tree
+    python randomforest.py features.npz labels.npz #number_of_trees
+    python decisiontree.py features.npz labels.npz decision_tree
 
 ## Come produrre i files
 
