@@ -7,8 +7,6 @@ Si utilizzano **Random Forest Classifier** e **Decision Tree Classifier** di **S
  
  Alle features sono associate le labels:
  - 'labels_original.npz' sono le labels originali di EMNIST Letters, convertite in matrici Numpy per semplicità di utilizzo
- - 'labels_corrected.npz' sono corrette come indicato sotto, e nella relazione
- 
 
 ## Riprodurre i risultati
 
@@ -24,11 +22,8 @@ Per produrre le immagini analoghe a (Cohen et al. 2017):
 Per produrre le confusion matrix:
 
     python decisiontree.py features_reduced.npz labels_original.npz
-    python decisiontree.py features_reduced.npz labels_corrected.npz
 
 Tutti gli altri risultati delle tabelle sono riproducibili tramite l'utilizzo delle features e degli script nella cartella 'heuristics_utils':
-### Labels 'Corrette'
-Nella relazione si propongono delle labels alternative per risolvere il problema sistematico della confusione tra i caratteri i e L, prevedendo l'inserimento di una nuova classe 'linea verticale'. I dettagli si trovano nella relazione.
 
 ## Sintassi degli script
 
@@ -50,10 +45,6 @@ Produci features **Istogrammi di Proiezioni** (15 mins):
 Produci features **Istogrammi di Grafi Orientati (hog)** (6 mins):
 
     python hog.py features_original.npz output_file
-
-Produci **Labels Corrette** (4 mins):
-
-    python edit.py labels_original.npz features_original.npz output_file
 
 Applica **Principal Component Analysis**:
 
@@ -86,10 +77,4 @@ Come produrre il file '**features_reduced.npz**'?
     python pca.py features_projection.npz 7 features_projectionPCA
     python truncate.py features_projectionPCA.npz
     python combine.py features_projectionPCA.npz features_fourier.npz features_reduced
-
-Come produrre il file '**labels_corrected.npz**'?
-
-    python edit.py labels_original.npz features_original.npz labels_corrected
-
-
 
