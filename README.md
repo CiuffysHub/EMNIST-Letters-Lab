@@ -5,8 +5,7 @@ Si utilizzano **Random Forest Classifier** e **Decision Tree Classifier** di **S
 
  Il file 'features_reduced.npz' è il risultato della Dimensionality Reduction. Le features originali sono omesse, scaricabili da NIST.
  
- Alle features sono associate le labels:
- - 'labels_original.npz' sono le labels originali di EMNIST Letters, convertite in matrici Numpy per semplicità di utilizzo
+ Il file 'labels_original.npz' contiene le labels originali di EMNIST Letters, convertite in matrici Numpy per semplicità di utilizzo2.
 
 ## Riprodurre i risultati
 
